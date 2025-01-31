@@ -13,3 +13,5 @@
         <mapping class="org.example.entities.Familia"/>
     </session-factory>
 </hibernate-configuration>
+
+

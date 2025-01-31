@@ -1,4 +1,4 @@
 package org.example.entities;
 
-public enum Estao {
+public enum Estado {
 }
