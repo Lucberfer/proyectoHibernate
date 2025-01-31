@@ -7,6 +7,10 @@ import java.util.List;
 
 /**
  * Interfaz que define las operaciones CRUD para la entidad Animales.
+ * Esta interfaz establece los métodos necesarios para realizar operaciones de obtención,
+ * búsqueda, inserción, actualización y eliminación de animales en la base de datos.
+ *
+ * @author Lucas
  */
 public interface AnimalesInt {
 

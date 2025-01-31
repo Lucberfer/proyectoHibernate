@@ -9,6 +9,10 @@ import java.util.List;
 
 /**
  * Implementación de la interfaz AnimalesInt para gestionar operaciones CRUD con Hibernate.
+ * Esta clase se encarga de la gestión de los animales en la base de datos a través de Hibernate.
+ * Proporciona métodos para realizar operaciones de obtención, búsqueda, inserción, actualización y eliminación.
+ *
+ * @author Lucas
  */
 public class AnimalesImpl implements AnimalesInt {
 
@@ -26,7 +30,7 @@ public class AnimalesImpl implements AnimalesInt {
     /**
      * Obtiene todos los registros de animales en la base de datos.
      *
-     * @return Lista de animales almacenados.
+     * @return Lista de animales almacenados en la base de datos.
      */
     @Override
     public List<Animales> obtenerTodos() {
@@ -37,7 +41,7 @@ public class AnimalesImpl implements AnimalesInt {
      * Busca animales por especie.
      *
      * @param especie Especie de los animales a buscar.
-     * @return Lista de animales que coincidan con la especie.
+     * @return Lista de animales que coincidan con la especie especificada.
      */
     @Override
     public List<Animales> buscarPorEspecie(String especie) {
@@ -63,7 +67,7 @@ public class AnimalesImpl implements AnimalesInt {
      * Busca animales que contengan un texto específico en su descripción.
      *
      * @param descripcion Texto a buscar dentro de la descripción.
-     * @return Lista de animales con descripciones que coincidan con el criterio.
+     * @return Lista de animales con descripciones que coincidan con el criterio proporcionado.
      */
     @Override
     public List<Animales> buscarPorDescripcion(String descripcion) {
@@ -75,8 +79,9 @@ public class AnimalesImpl implements AnimalesInt {
     /**
      * Guarda un nuevo animal en la base de datos.
      *
-     * @param animal Objeto Animales a registrar.
-     * @return El animal registrado.
+     * @param animal Objeto Animales a registrar en la base de datos.
+     * @return El animal registrado con la información actualizada, incluyendo su ID asignado.
+     * @throws HibernateException Si ocurre un error durante el proceso de guardado.
      */
     @Override
     public Animales guardar(Animales animal) {
@@ -94,8 +99,9 @@ public class AnimalesImpl implements AnimalesInt {
     /**
      * Actualiza los datos de un animal en la base de datos.
      *
-     * @param animal Objeto Animales con la información actualizada.
+     * @param animal Objeto Animales con la información actualizada que se desea guardar.
      * @return El animal actualizado.
+     * @throws HibernateException Si ocurre un error durante el proceso de actualización.
      */
     @Override
     public Animales actualizar(Animales animal) {
@@ -114,7 +120,8 @@ public class AnimalesImpl implements AnimalesInt {
      * Elimina un animal de la base de datos por su ID.
      *
      * @param id Identificador del animal a eliminar.
-     * @return {@code true} si se eliminó correctamente, {@code false} si no se encontró.
+     * @return {@code true} si el animal se eliminó correctamente, {@code false} si no se encontró el animal.
+     * @throws HibernateException Si ocurre un error durante el proceso de eliminación.
      */
     @Override
     public boolean eliminarPorId(Long id) {

@@ -13,6 +13,10 @@ import java.util.List;
 /**
  * Clase que proporciona operaciones CRUD y consultas específicas para la entidad {@link Familia}.
  * Implementa la interfaz {@link FamiliaInt}.
+ * Esta clase maneja las operaciones necesarias para interactuar con la base de datos
+ * relacionadas con las familias, tales como obtener, registrar, modificar y eliminar registros.
+ *
+ * @see FamiliaInt
  */
 public class FamiliaImpl implements FamiliaInt {
 

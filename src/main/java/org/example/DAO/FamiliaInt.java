@@ -5,6 +5,9 @@ import java.util.List;
 
 /**
  * Interfaz que define las operaciones básicas para la gestión de familias en la base de datos.
+ * Esta interfaz proporciona métodos para obtener, registrar, modificar y eliminar registros de familias.
+ *
+ * @see Familia
  */
 public interface FamiliaInt {
 
