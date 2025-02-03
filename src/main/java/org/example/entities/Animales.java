@@ -208,4 +208,12 @@ public class Animales implements Serializable {
     public String toString() {
         return "Nombre: " + nombre + ", Tipo: " + tipo + ", Años: " + años + ", Detalles: " + detalles;
     }
+
+    public int getEdad() {
+        return this.años;
+    }
+
+    public void setEdad(int i) {
+        this.años = i;
+    }
 }
